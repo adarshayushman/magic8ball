@@ -5,6 +5,10 @@ question = input("Please ask your question that has a 'Yes' or 'No' answer: ")
 answer = ""
 random_number = random.randint(1,9)
 print("Hello " + name + "\nYou asked: " + question + "\n")
+if name == "": 
+  print("Question asked: " + question + "\n")
+else: 
+    print("Hello " + name + "\nYou asked: " + question + "\n")
 if random_number == 1: 
   answer = "Yes - definitely"
 elif random_number == 2: 
@@ -12,9 +16,9 @@ elif random_number == 2:
 elif random_number == 3: 
   answer = "Without a doubt"
 elif random_number == 4: 
-  answer = "If it's meant to be, it will happen" 
+  answer = "Reply hazy, try again" 
 elif random_number == 5: 
-  answer = "High chances" 
+  answer = "If it's meant to be, it will happen" 
 elif random_number == 6: 
   answer = "Better not tell you now"
 elif random_number == 7: 
@@ -24,5 +28,8 @@ elif random_number == 8:
 elif random_number == 9: 
   answer = "Very doubtful"
 else:  
-  print("Error")     
-print("Magic 8-Ball's answer: " + answer)        
+  print("Error") 
+if question == "": 
+  print("Oops! You forgot to ask a question. Please enter one and try again.  ")  
+else: 
+  print("Magic 8-Ball's answer: " + answer) 
